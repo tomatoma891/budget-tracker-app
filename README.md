@@ -3,7 +3,7 @@
 A progressive web application for tracking your budget.
 
 # Visuals
-
+![](budgettracker.png)
 
 # Usage
 1. Navigate to https://fast-bastion-53832.herokuapp.com/
