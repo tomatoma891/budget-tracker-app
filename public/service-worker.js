@@ -1,9 +1,7 @@
 const FILES_TO_CACHE = [
     "/",
-    "index.html",
-    "style.css",
     "index.js",
-    "db.js"
+    "styles.css",
   ]
   
   const PRECACHE = 'precache-v1';
@@ -17,18 +15,18 @@ const FILES_TO_CACHE = [
     );
   });
   
-  // self.addEventListener("activate", event => {
-  //   const currentCaches = [PRECACHE, RUNTIME];
-  //   event.waitUntil(
-  //     caches.keys().then(cacheNames => {
-  //       return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
-  //     }).then(cachesToDelete => {
-  //       return Promise.all(cachesToDelete.map(cacheToDelete => {
-  //         return caches.delete(cacheToDelete);
-  //       }));
-  //     }).then(() => self.clients.claim())
-  //   );
-  // });
+  self.addEventListener("activate", event => {
+    const currentCaches = [PRECACHE, RUNTIME];
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+      }).then(cachesToDelete => {
+        return Promise.all(cachesToDelete.map(cacheToDelete => {
+          return caches.delete(cacheToDelete);
+        }));
+      }).then(() => self.clients.claim())
+    );
+  });
   
   
   self.addEventListener("fetch", function (event) {
