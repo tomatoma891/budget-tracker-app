@@ -12,13 +12,14 @@ A progressive web application for tracking your budget.
 4. Bugdet is represented with a graph
 5. App will continue to work when you are offline.
 6. When you again have connectivity any changes will be synched with the MongoDB
+ 
+# What I learned
 
-#What I learned
 **Working with a Progressive Web App
 **Creating Service Worker and webmanifests
 **MongoDB / Mongoose for DB CRUD
 
-#Links to Project
+# Links to Project
 
 GitHub 
 
